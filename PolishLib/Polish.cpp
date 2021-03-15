@@ -101,7 +101,7 @@ void TOperFactory::Create(char* s, int& n, IOper**& opers)
 int TPolish::Calculate(char* s)
 {
   int n = 0;
-  IOper** opers = nullptr;
+  IOper** opers =  NULL;
   TOperFactory::Create(s, n, opers);
 
   IOper** res = new IOper * [n];
