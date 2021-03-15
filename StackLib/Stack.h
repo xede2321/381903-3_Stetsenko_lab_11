@@ -99,7 +99,7 @@ TStack<T>::~TStack()
   size = 0;
   if (flag)
   {	
-    if (data != nullptr)
+    if (data != NULL)
     {
       delete[] data;
       data = 0;
@@ -156,7 +156,7 @@ void TStack<T>::SetData(T* _data, int _size, int _top)
 {
   if (flag)
   {
-    if (data != nullptr)
+    if (data != NULL)
       delete[] data;
   }
   size = _size;
@@ -168,18 +168,18 @@ void TStack<T>::SetData(T* _data, int _size, int _top)
 template<class T>
 void TStack<T>::Resize(int _size)
 {
-  if (data == nullptr)
+  if (data == NULL)
   {
     if (_size > size)
       size = _size + 1;
     data = new T[size];
-    if (data == nullptr)
+    if (data == NULL)
       throw - 1;
   }
   else if ((top + _size) > size)
   {
     T* temp = new T[_size];
-    if (temp == nullptr)
+    if (temp == NULL)
       throw - 1;
     for (int i = 0; i < this->GetCount(); ++i)
       temp[i] = this->Get();
